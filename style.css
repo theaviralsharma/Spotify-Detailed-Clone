@@ -1,0 +1,733 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0; /* Remove default margin */
+    background-color: black;
+    color: white;
+    overflow: hidden; /* Prevent horizontal scroll */
+    
+    /* Styling for the scrollbar */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #444 #121212; /* For Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #444; /* Adjust scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar corners */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #121212; /* Adjust scrollbar track color */
+  }
+  
+  .box-container {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #444 #121212; /* For Firefox */
+    height: 400px; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  
+  .box-container::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+  }
+  
+  .box-container::-webkit-scrollbar-thumb {
+    background-color: #444; /* Adjust scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar corners */
+  }
+  
+  .box-container::-webkit-scrollbar-track {
+    background: #121212; /* Adjust scrollbar track color */
+  }
+
+.trademark {
+    font-size: 0.3em; /* Making it even smaller */
+    vertical-align: super;
+  }
+
+.main {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+  padding: 0.8rem;
+}
+
+.main-logo{
+    display: none;
+}
+
+.sidebar {
+    width: 340px;
+    background-color: black;
+    border-radius: 1rem; /* Rounded corners */
+    margin-bottom: 83px;
+    padding: 0.05rem 0.5rem;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem; /* Slightly larger rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top with some spacing */
+    height: 140px; /* Slightly increased height */
+    padding: 1.75rem 1.25rem 1.25rem 1.25rem; /* Adjusted padding */
+    font-size: 1.1rem; /* Slightly larger font size */
+}
+
+.nav-logo {
+    margin-bottom: 1rem; /* Space between logo and options */
+    font-size: 1.1rem; /* Slightly larger font size for logo */
+}
+
+.nav-option {
+    line-height: 2.2rem; /* Slightly larger line height */
+    font-size: 1.1rem; /* Slightly larger font size for options */
+    margin-bottom: 0.75rem; /* Space between options */
+    opacity: 0.6;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem; /* Slightly larger icon size */
+}
+
+.nav-option a {
+    font-size: 1rem; /* Slightly larger text size */
+    margin-left: 0.85rem; /* Adjusted space between icon and text */
+}
+
+.nav-logo i {
+    font-size: 1.4rem; /* Slightly larger logo icon size */
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem; /* Rounded corners */
+    margin-bottom: 83px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.icons:hover {
+    opacity: 1;
+}
+
+.lib-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+    overflow: hidden; /* Prevent horizontal scroll */
+}
+
+.box-container {
+    height: 10rem; /* Increased height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-top: 2.5rem; /* Increased space above the first box */
+    padding-bottom: 2.5rem; /* Increased space below the last box */
+}
+
+.box {
+    background-color: #232323;
+    height: 10rem; /* Height of each box */
+    border-radius: 0.75rem; /* Rounded corners */
+    margin-bottom: 1rem; /* Space between boxes */
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    color: #bbbbbb;
+}
+
+/* Optional: Styling for scrollbar */
+.box-container::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+}
+
+.box-container::-webkit-scrollbar-thumb {
+    background-color: #444; /* Adjust scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar corners */
+}
+
+.badge {
+    background-color: white;
+    border: none;
+    border-radius: 100px; /* Rounded corners */
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    width: fit-content ;
+}
+
+.dark-badge {
+    background-color: #121212;
+    color: white;
+}
+
+.hollow-border {
+    opacity: 1;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.legal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced space between lines */
+}
+
+.line {
+    display: flex;
+    gap: 15px; /* Reduced space between items in the same line */
+}
+
+.legal-item {
+    font-size: 0.65rem; /* Smaller font size */
+    color: #bbbbbb; /* Text color */
+    cursor: pointer; /* Indicate that items are clickable */
+    margin-right: 5px; /* Reduced space between items in the same line */
+}
+
+/* Optional: Styling for hover effect */
+.legal-item:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 300px;
+    }
+
+    .nav {
+        padding: 1.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .nav-logo, .nav-option {
+        font-size: 1rem;
+    }
+
+    .library {
+        padding: 0.5rem;
+    }
+
+    .box-container {
+        height: 9rem;
+    }
+
+    .box {
+        height: 8.5rem;
+    }
+
+    .legal-item {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 260px;
+    }
+
+    .nav {
+        padding: 1.25rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-logo, .nav-option {
+        font-size: 0.95rem;
+    }
+
+    .library {
+        padding: 0.4rem;
+    }
+
+    .box-container {
+        height: 8rem;
+    }
+
+    .box {
+        height: 8rem;
+    }
+
+    .legal-item {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .nav {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-logo, .nav-option {
+        font-size: 0.9rem;
+    }
+
+    .library {
+        padding: 0.3rem;
+    }
+
+    .box-container {
+        height: 7rem;
+    }
+
+    .box {
+        height: 7.5rem;
+    }
+
+    .legal-item {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .nav {
+        padding: 0.75rem 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .nav-logo, .nav-option {
+        font-size: 0.85rem;
+    }
+
+    .library {
+        padding: 0.2rem;
+    }
+
+    .hide-you-library {
+        display: none;
+    }
+
+    .box-container {
+        display: none;
+    }
+
+    .box {
+        height: 7rem;
+    }
+
+    .legal-item {
+        font-size: 0.45rem;
+    }
+}
+
+.round-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Smaller rounded corners */
+    padding: 0.2rem 0.75rem; /* Smaller padding */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    height: 2rem; /* Smaller height */
+    width: auto; /* Adjust width automatically based on content */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.round-btn-left{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Smaller rounded corners */
+    padding: 0.2rem 0.75rem; /* Smaller padding */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    height: 2rem; /* Smaller height */
+    width: auto; /* Adjust width automatically based on content */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.round-btn-right{
+    background-color: #121212;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Smaller rounded corners */
+    padding: 0.2rem 0.75rem; /* Smaller padding */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    height: 2rem; /* Smaller height */
+    width: auto; /* Adjust width automatically based on content */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem; /* Rounded corners */
+    overflow: auto; /* Scroll if content overflows */
+    margin-bottom: 116px;
+}
+
+.sticky-nav {
+    position: sticky; /* Stick to the top */
+    top: 0; /* Stick to the top */
+    /* background-color: #232323; */
+    opacity: 1;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0 0.8rem 0;
+}
+
+.sticky-nav-icons{
+    display: flex;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+    opacity: 0.6;
+}
+
+.sticky-nav-icons:hover {
+    opacity: 1;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 1011px) {
+    .hide {
+        display: none;
+    }
+    .round-btn{
+        display: none;
+    }
+}
+
+@media (max-width: 836px) {
+    .hideInstall {
+        display: none;
+    }
+}
+
+@media (max-width: 697px){
+    .hide-round-btn-right {
+        display: none;
+    }
+}
+
+@media (max-width: 627px) {
+    .sticky-nav{
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+}
+
+.card {
+    background-color: #232323;
+    border-radius: 1rem; /* Rounded corners */
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: 1.5rem; /* Increased margin-right to move content a bit right */
+    margin-left: 1.5rem; /* Added margin-left to prevent overlap */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to separate the card from the background */
+    display: inline-block; /* Only take up as much space as needed */
+    text-align: center; /* Center-align content inside the card */
+    width: auto; /* Adjust width according to content */
+}
+
+.card img {
+    width: 210px; /* Fixed width */
+    height: 210px; /* Fixed height to keep the image square */
+    border-radius: 0.5rem; /* Optional: slightly rounded corners for the image */
+    object-fit: cover; /* Ensure the image covers the entire area without stretching */
+    margin-bottom: 1rem; /* Space between the image and the text */
+}
+
+.card title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 240px;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.card-info {
+    font-size: 1rem;
+    width: 240px;
+    text-align: center;
+    color: #bbbbbb;
+}
+
+.footer {
+    background-color: #121212; /* Dark background color to match the theme */
+    color: #bbbbbb; /* Light gray text color for contrast */
+    text-align: center; /* Center-align text */
+    padding: 1rem; /* Add some padding around the text */
+    font-size: 0.9rem; /* Slightly smaller font size for the footer */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow at the top */
+}
+
+.spotify-footer {
+    margin-top: 1rem; /* Space between the footer and the content */
+    background-color: #121212; /* Dark background to match the theme */
+    color: #ffffff; /* White text color */
+    padding: 0.5rem; /* Reduced padding around the footer */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top */
+    box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+}
+
+.player-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.album-info {
+    display: flex;
+    align-items: center;
+    width: 25%; /* Occupy 25% of the screen */
+}
+
+.album-img {
+    width: 50px; /* Reduced width */
+    height: 50px; /* Reduced height */
+    border-radius: 4px; /* Slightly smaller border-radius */
+    margin-right: 8px; /* Reduced margin-right */
+    margin-left: 40px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-title {
+    font-size: 0.8rem; /* Slightly smaller font size */
+    font-weight: bold;
+}
+
+.artist-name {
+    font-size: 0.7rem; /* Smaller font size */
+    color: #bbbbbb;
+}
+
+.add-to-favorites {
+    margin-left: 50px; /* Reduced margin-left */
+    font-size: 1rem; /* Smaller font size */
+    color: #1db954; /* Spotify green color */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.add-to-favorites:hover {
+    color: #1ed760; /* Lighter green on hover */
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Occupy 50% of the screen */
+}
+
+.control-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px; /* Reduced margin-bottom */
+}
+
+.control-icons i {
+    margin: 0 8px; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.control-icons .play-icon {
+    font-size: 1.2rem; /* Slightly larger play icon */
+    color: #1db954; /* Bright green for play icon */
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.start-time,
+.end-time {
+    font-size: 0.7rem; /* Smaller font size */
+    color: #bbbbbb;
+}
+
+.progress {
+    flex-grow: 1;
+    margin: 0 8px; /* Reduced margin */
+    height: 4px; /* Slightly smaller height */
+    background: #555;
+    border-radius: 4px; /* Slightly smaller border-radius */
+    outline: none;
+    cursor: pointer;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px; /* Smaller thumb width */
+    height: 8px; /* Smaller thumb height */
+    background: #1db954;
+    border-radius: 50%;
+}
+
+.progress::-moz-range-thumb {
+    width: 8px; /* Smaller thumb width */
+    height: 8px; /* Smaller thumb height */
+    background: #1db954;
+    border-radius: 50%;
+}
+
+.player-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%; /* Occupy remaining 25% of the screen */
+}
+
+.player-options i,
+.player-options .volume {
+    margin: 0 8px; /* Reduced margin */
+    font-size: 1rem; /* Smaller font size */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.volume {
+    width: 60px; /* Reduced width */
+    height: 4px; /* Smaller height */
+    background: #555;
+    border-radius: 4px; /* Smaller border-radius */
+    outline: none;
+    cursor: pointer;
+}
+
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px; /* Smaller thumb width */
+    height: 8px; /* Smaller thumb height */
+    background: #1db954;
+    border-radius: 50%;
+}
+
+.volume::-moz-range-thumb {
+    width: 8px; /* Smaller thumb width */
+    height: 8px; /* Smaller thumb height */
+    background: #1db954;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .album-info {
+        width: 30%;
+    }
+
+    .player-controls {
+        width: 40%;
+    }
+
+    .player-options {
+        width: 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    .album-info,
+    .player-controls,
+    .player-options {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .player-section {
+        flex-direction: column;
+    }
+
+    .control-icons {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 450px) {
+    .main-content {
+        margin-bottom: 200px;
+    }
+    .sidebar {
+        display: none;
+    }
+    .main-logo{
+        display:flex;
+        font-size: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+}
+
+
